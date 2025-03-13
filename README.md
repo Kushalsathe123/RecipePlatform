@@ -1,6 +1,7 @@
 # RecipePlatform
 
 A microservices-based Recipe Platform built with .NET Core and C#.
+![recipe-platform-banner (1)](https://github.com/user-attachments/assets/454d9852-7e3c-4a93-90ca-7b732b2c7a83)
 
 ## 🌟 Overview
 
