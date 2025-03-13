@@ -7,7 +7,7 @@ A microservices-based Recipe Platform built with .NET Core and C#.
 RecipePlatform is a modern, cloud-native application that provides a comprehensive solution for recipe management and sharing. The platform is built using a microservices architecture, ensuring scalability, maintainability, and robust feature delivery.
 
 ## 🏗️ Architecture
-
+```mermaid
 flowchart LR
     %% Core nodes
     User(["👤"])
@@ -39,7 +39,7 @@ flowchart LR
     class Gateway gateway
     class AdminSvc,NotifySvc service
     class KeyVault,SMTP external
-
+```
 The application is structured into several microservices:
 
 1. **Gateway Service**
