@@ -8,6 +8,38 @@ RecipePlatform is a modern, cloud-native application that provides a comprehensi
 
 ## 🏗️ Architecture
 
+flowchart LR
+    %% Core nodes
+    User(["👤"])
+    
+    %% Main services
+    Gateway[("API Gateway")]
+    AdminSvc["Admin Service"]
+    NotifySvc["Notification Service"]
+    
+    %% External services
+    KeyVault[("Azure KeyVault")]
+    SMTP[("SMTP")]
+    
+    %% Connections
+    User --> Gateway
+    Gateway --> AdminSvc
+    Gateway --> NotifySvc
+    AdminSvc -.-> KeyVault
+    NotifySvc -.-> KeyVault
+    NotifySvc --> SMTP
+    
+    %% Styling
+    classDef user fill:#FF5722,color:#fff,stroke:none
+    classDef gateway fill:#00BCD4,color:#fff,stroke:none
+    classDef service fill:#333,color:#fff,stroke:none
+    classDef external fill:#673AB7,color:#fff,stroke:none
+    
+    class User user
+    class Gateway gateway
+    class AdminSvc,NotifySvc service
+    class KeyVault,SMTP external
+
 The application is structured into several microservices:
 
 1. **Gateway Service**
